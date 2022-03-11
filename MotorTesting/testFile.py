@@ -19,7 +19,7 @@ servo = [GPIO.PWM(11,50),GPIO.PWM(13,50)]
 
 # Start PWM running, with value of 0 (pulse off)
 servo[0].start(0)
-servo[0].start(0)
+servo[1].start(0)
 
 duty = [7,7]
 # set to 90 initial
@@ -30,7 +30,7 @@ servo[0].ChangeDutyCycle(0)
 
 servo[1].ChangeDutyCycle(duty[1])
 time.sleep(0.5)
-servo[1].CangeDutyCycle(0)
+servo[1].ChangeDutyCycle(0)
 
 
 # Loop to allow user to set servo angle. Try/finally allows exit
