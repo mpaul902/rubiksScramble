@@ -18,16 +18,16 @@ servo1.start(0)
 try:
     while True:
         #Ask user for duty value and turn servo to it
-        duty = float(input('Enter angle between 0 & 20: '))
-        servo1.ChangeDutyCycle(duty)
-        time.sleep(0.5)
-        servo1.ChangeDutyCycle(0)
-
-        # #Ask user for angle and turn servo to it    
-        # angle = float(input('Enter angle between 0 & 180: '))
-        # servo1.ChangeDutyCycle(2+(angle/18))
+        # duty = float(input('Enter angle between 0 & 20: '))
+        # servo1.ChangeDutyCycle(duty)
         # time.sleep(0.5)
         # servo1.ChangeDutyCycle(0)
+
+        # #Ask user for angle and turn servo to it    
+        angle = float(input('Enter angle between 0 & 180: '))
+        servo1.ChangeDutyCycle(1.9+(angle/18))
+        time.sleep(0.5)
+        servo1.ChangeDutyCycle(0)
 
 finally:
     #Clean things up at the end
