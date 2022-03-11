@@ -53,12 +53,12 @@ try:
         snum = int(snum)
 
         if dir == "CW" and duty[snum]<=7:
-            duty[snum]+=7
+            duty[snum]+=5
             servo[snum].ChangeDutyCycle(duty[snum])
             time.sleep(0.5)
             servo[snum].ChangeDutyCycle(0)
         if dir == "CCW" and duty[snum]>=7:
-            duty[snum]-=7
+            duty[snum]-=5
             servo[snum].ChangeDutyCycle(duty[snum])
             time.sleep(0.5)
             servo[snum].ChangeDutyCycle(0)
